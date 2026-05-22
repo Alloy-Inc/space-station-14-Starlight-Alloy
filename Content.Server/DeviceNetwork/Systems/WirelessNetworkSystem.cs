@@ -27,6 +27,10 @@ namespace Content.Server.DeviceNetwork.Systems
             if (!TryComp<WirelessNetworkComponent>(args.Sender, out var sendingComponent))
                 return;
 
+            // Allow direct wireless camera feeds when one endpoint is configured for global cross-map transmission.
+            if (component.Global || sendingComponent.Global)
+                return;
+
             if (xform.MapID != args.SenderTransform.MapID
                 || (ownPosition - _transformSystem.GetWorldPosition(xform)).Length() > sendingComponent.Range)
             {

@@ -9,5 +9,8 @@ namespace Content.Server.DeviceNetwork.Components
     {
         [DataField("range")]
         public int Range { get; set; }
+
+        [DataField("global")]
+        public bool Global { get; set; }
     }
 }

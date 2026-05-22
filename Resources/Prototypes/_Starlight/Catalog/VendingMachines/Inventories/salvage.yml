@@ -165,6 +165,16 @@
   conditions:
     - !type:BuyerAccessCondition
 
+- type: listing
+  id: VendorSalvageSurveillanceHeadset
+  productEntity: ClothingHeadsetSurveillanceSalvage
+  cost:
+    SalvageTicket: 100
+  categories:
+    - SalvageMercenaryEquipment
+  conditions:
+    - !type:BuyerAccessCondition
+
 #- type: listing
 #  id: VendorSalvageExpeditionEncryptionKey
 #  productEntity: EncryptionKeyExpedition

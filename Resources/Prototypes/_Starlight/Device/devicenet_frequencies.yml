@@ -14,3 +14,8 @@
   id: SurveillanceCameraIsolatedNetwork
   name: device-frequency-prototype-name-surveillance-camera-isolated-network
   frequency: 1940
+
+- type: deviceFrequency
+  id: SurveillanceCameraExpedition
+  name: device-frequency-prototype-name-surveillance-camera-expedition
+  frequency: 1941

@@ -37,6 +37,35 @@
   # Starlight End
 
 - type: entity
+  parent: ClothingHeadsetSurveillance
+  id: ClothingHeadsetSurveillanceSalvage
+  name: Scrapper Camera Headset
+  description: A rugged scrapper headset with a built-in wireless camera.
+
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: SurveillanceCameraCommon
+    transmitFrequencyId: SurveillanceCameraCommon
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyCargo
+      - EncryptionKeyExpedition
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/cargo.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/cargo.rsi
+  - type: WirelessNetworkConnection
+    range: 200
+    global: true
+  - type: SurveillanceCamera
+    setupAvailableNetworks:
+      - SurveillanceCameraExpedition
+      - SurveillanceCameraEntertainment
+
+- type: entity
   parent: ClothingHeadset
   id: ClothingHeadsetAssistant
   name: assistant headset
