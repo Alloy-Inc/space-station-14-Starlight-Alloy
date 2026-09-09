@@ -622,7 +622,7 @@ type: entity
   name: Lawbringer
   parent: [BaseWeaponRifle, BaseSecurityContraband]
   id: WeaponRifleLawbringer
-  description: "A bullpup carbine of modern design, commissioned by CentComm for their security forces.\nFeeds from .30 rifle magazines."
+  description: "A bullpup carbine of modern design, commissioned by CentComm for their security forces.Feeds from .30 rifle magazines."
   components:
   - type: Sprite
     sprite: _Starlight/Objects/Weapons/Guns/Rifles/lawbringer.rsi
