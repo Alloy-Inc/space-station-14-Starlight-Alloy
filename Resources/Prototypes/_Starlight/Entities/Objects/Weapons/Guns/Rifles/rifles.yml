@@ -1,4 +1,4 @@
-- type: entity
+type: entity
   name: Lecter
   parent: [WeaponRifleLecter, BaseSecurityContraband]
   id: WeaponRifleLecterRubber
@@ -433,6 +433,65 @@
         priority: 1
         whitelist:
           tags:
+
+- type: entity
+  name: Bolt Rifle
+  parent: [BaseWeaponRifle, BaseSalvageContraband]
+  id: WeaponRifleBolt
+  description: A favored amongst high-end Strike teams and PMCs, fires high-caliber explosive rounds. Watch out for the recoil. Uses impact bolts instead of standard kinetic rounds.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Rifles/m16.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Starlight/Objects/Weapons/Guns/Rifles/m16.rsi
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,2
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -18
+    maxAngle: -15
+  - type: Gun
+    minAngle: 1
+    maxAngle: 2
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+    - FullAuto
+    shotsPerBurst: 3
+    soundGunshot:
+      path: /Audio/_Starlight/Weapons/Guns/Gunshots/m16.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineBoltRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineBoltRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgeImpactBolt
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
 
 - type: entity
   name: M18-Militant

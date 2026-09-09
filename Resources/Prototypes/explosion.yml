@@ -1,3 +1,18 @@
+-type: explosion
+  id: ImpactBolt
+  damagePerIntensity:
+    types:
+      Blunt: 4
+      Piercing: 3
+      Heat: 3
+      Structural: 20
+  tileBreakChance: [0]
+  tileBreakIntensity: [0]
+  lightColor: Orange
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+  temperature: 800
+
 - type: explosion
   id: Default
   damagePerIntensity:
@@ -163,3 +178,4 @@
   fireStates: 3
   temperature: 800
 #Starlight-end
+
